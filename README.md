@@ -1,2 +1,0 @@
-# fakemcdonald
-fake mcdonald app
