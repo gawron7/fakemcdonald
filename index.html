@@ -100,7 +100,28 @@ Nulla sed magna non ex scelerisque ultrices. Sed gravida ipsum quis justo eleife
 
 Curabitur eu posuere ante. Aliquam tincidunt felis dapibus diam commodo mattis quis eu nisl. Aliquam erat volutpat. Proin at arcu nibh. Quisque vitae neque et risus facilisis finibus id sit amet odio. Sed scelerisque, ex et hendrerit rhoncus, lorem diam suscipit nulla, ut congue mi massa condimentum ex. Integer diam tellus, porta sit amet ligula quis, lacinia euismod odio. Donec posuere suscipit odio, quis convallis ipsum dictum eu. Nulla at diam sed odio laoreet finibus. Etiam porttitor ut velit suscipit pulvinar. Proin nunc velit, imperdiet sed mollis quis, euismod at velit. Duis finibus est erat, sit amet convallis risus bibendum nec. Duis hendrerit neque ac nunc consequat lacinia. Donec viverra nisl nec purus tempus, non bibendum nibh ultricies. Fusce orci erat, ultricies ac diam sed, faucibus facilisis nunc. Ut ut vehicula lacus, a laoreet tellus.
     </div>
-
+<input type="button" value="click to toggle fullscreen" onclick="toggleFullScreen()">
+<script>
+function toggleFullScreen() {
+if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+(!document.mozFullScreen && !document.webkitIsFullScreen)) {
+if (document.documentElement.requestFullScreen) {  
+document.documentElement.requestFullScreen();  
+} else if (document.documentElement.mozRequestFullScreen) {  
+document.documentElement.mozRequestFullScreen();  
+} else if (document.documentElement.webkitRequestFullScreen) {      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+}  
+} else {  
+if (document.cancelFullScreen) {  
+document.cancelFullScreen();  
+} else if (document.mozCancelFullScreen) {  
+document.mozCancelFullScreen();  
+} else if (document.webkitCancelFullScreen) {  
+document.webkitCancelFullScreen();  
+}  
+}  
+}
+    </script>
     <script src="hideAddressbar.js"></script>
     <script>hideAddressbar('#page');</script>
 </body>
